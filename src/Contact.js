@@ -31,6 +31,7 @@ function Contact() {
                         <p className="any-questions-text">
                         Flowers come in all shapes, sizes, and colors. You can choose from a single flower or mix and match them to create something truly unique. We'll walk you through the process so that your gift is perfect for any occasion.
                         </p>
+                        <div className="contact-us-button-container"><button type="button" className="main-button">CONTACT US</button></div>
                     </div>
                 </div>
             </div>

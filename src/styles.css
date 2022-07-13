@@ -274,7 +274,13 @@ nav li a:hover{
     flex-direction: column;
     align-items: center;
 }
-
+.any-questions-text {
+    margin-bottom: 2rem;
+}
+.contact-us-button-container {
+    display: flex;
+    justify-content: center;
+}
 @media only screen and (min-width: 700px) {
     .contact-information {
         width: 400px;
