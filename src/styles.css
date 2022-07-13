@@ -87,11 +87,24 @@ nav li a {
     font-weight: 400;
     font-size: 1.1rem;
 }
+nav li a:hover{
+    text-decoration: underline;
+}
 .cart-icon {
     height: 1.2rem;
 }
+.nav-cart {
+    transition: all 0.2s ease-in-out;
+}
+.nav-cart:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+}
 .nav-cart a {
     display: flex;
+}
+.nav-cart a:hover {
+    text-decoration: none;
 }
 .cart-item-count {
     height: 1.1rem;
@@ -116,13 +129,14 @@ nav li a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 .hero-img {
     width: 250px;
+    z-index: -2;
     position: absolute;
-    right: 0;
     top: 0;
-    z-index: -1;
+    right: -60px;
 }
 .break {
     font-weight: 900;
@@ -131,11 +145,17 @@ nav li a {
     content: "\a";
     white-space: pre;
 }
+.hero-title-img {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    position: relative;
+}
 .hero-title-container {
     align-self: flex-start
 }
 .hero-title {
-    margin-top: 4rem;
+    margin-top: 60px;
     font-size: 1.8rem;
     line-height: 130%;
     font-weight: 700;
@@ -143,7 +163,7 @@ nav li a {
     width: max(50%, 215px)
 }
 .hero-button-container {
-    margin-top: 3rem;
+    margin-top: 50px;
 }
 .main-button {
     border: none;
@@ -154,6 +174,9 @@ nav li a {
     border-radius: 5px;
     padding: 0.3rem 0.6rem;
     cursor: pointer;
+}
+.main-button:hover {
+    background-color: #bbb1bd;
 }
 .footer {
     position: absolute;
@@ -173,6 +196,10 @@ nav li a {
     text-decoration: none;
     font-weight: 700;
     color: #565B7B;
+    transition: all 0.3s ease-in-out;
+}
+.footer-text:hover{
+    transform: scale(1.1);
 }
 @media only screen and (min-width: 700px) {
     nav {
@@ -192,5 +219,53 @@ nav li a {
         height: 1.2rem;
         font-size: 1.1rem;
     }
-
+    .hero-img {
+        top: -50px;
+        width: 400px;
+    }
+    .hero-title {
+        margin-top: 150px;
+        font-size: 2rem;
+        width: auto;
+        line-height: 150%;
+    }
+    .hero-button-container {
+        margin-top: 80px;
+    }
+    .hero-title-img {
+        max-width: 750px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .hero-img {
+        width: 500px;
+        right: -150px;
+    }
+    .hero-title {
+        margin-top: 180px;
+        font-size: 2.5rem;
+    }
+    .hero-button-container {
+        margin-top: 150px;
+    }
+}
+@media only screen and (min-width: 1800px) {
+    .hero-img {
+        width: 700px;
+        right: -100px;
+        top: -100px;
+    }
+    .hero-title {
+        margin-top: 210px;
+        font-size: 3.2rem;
+    }
+    .hero-button-container {
+        margin-top: 200px;
+    }
+    .hero-title-img {
+        max-width: 1200px;
+    }
+    .main-button {
+        font-size: 1.8rem;
+    }
 }

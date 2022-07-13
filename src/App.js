@@ -10,9 +10,11 @@ function App() {
     <div className="main-container">
       <Nav />
       <div className="hero-container">
-        <img className="hero-img" src={hero} alt="flower bouquet"></img>
-        <div className="hero-title-container">
-          <h2 className="hero-title">NOTHING SAYS<span className="break">"I LOVE YOU"</span>LIKE A BOUQUET</h2>
+        <div className="hero-title-img">
+          <div className="hero-title-container">
+            <h2 className="hero-title">NOTHING SAYS<span className="break">"I LOVE YOU"</span>LIKE A BOUQUET</h2>
+          </div>
+          <img className="hero-img" src={hero} alt="flower bouquet"></img>
         </div>
         <div className="hero-button-container">
           <Link to="/"><button type="button" className="main-button">SHOP NOW</button></Link>
