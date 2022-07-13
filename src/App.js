@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Nav from "./components/Nav";
+import hero from "./img/hero.jpg";
+import {Link} from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      <Nav />
+      <div className="hero-container">
+        <img className="hero-img" src={hero} alt="flower bouquet"></img>
+        <div className="hero-title-container">
+          <h2 className="hero-title">NOTHING SAYS<span className="break">"I LOVE YOU"</span>LIKE A BOUQUET</h2>
+        </div>
+        <div className="hero-button-container">
+          <Link to="/"><button type="button" className="main-button">SHOP NOW</button></Link>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
