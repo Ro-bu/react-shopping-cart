@@ -19,6 +19,12 @@ function App() {
         <div className="hero-button-container">
           <Link to="/"><button type="button" className="main-button">SHOP NOW</button></Link>
         </div>
+        <div className="lander-featured-products">
+          <h2 className="featured-products-title">FEATURED PRODUCTS</h2>
+          <div className="featured-products-container">
+            
+          </div>
+        </div>
       </div>
       <Footer />
     </div>
