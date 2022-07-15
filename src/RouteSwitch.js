@@ -53,9 +53,9 @@ function RouteSwitch() {
         <BrowserRouter basename="/">
             <Routes>
                 <Route path="/" element={<App addToCart={addToCart} cartCount={cartCount} />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/shop" element={<Shop />} />
-                <Route path="/shop/:productId" element={<ProductPage />} />
+                <Route path="/contact" element={<Contact cartCount={cartCount} />} />
+                <Route path="/shop" element={<Shop cartCount={cartCount} addToCart={addToCart} />} />
+                <Route path="/shop/:productId" element={<ProductPage cartCount={cartCount} addToCart={addToCart} />} />
             </Routes>
         </BrowserRouter>
     )
