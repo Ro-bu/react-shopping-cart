@@ -7,6 +7,18 @@ import ProductPage from "./ProductPage";
 
 function RouteSwitch() {
     const [shoppingCart, setShoppingCart] = React.useState([]);
+    const [cartCount, setCartCount] = React.useState(0)
+
+    function updateCartCount() {
+        let newCount = 0;
+        shoppingCart.forEach((obj) => {
+            newCount += obj.qty
+        })
+        setCartCount(newCount);
+    }
+    React.useEffect(() => {
+        updateCartCount();
+    }, [shoppingCart])
 
     function addToCart(productId) {
         console.log(shoppingCart)
@@ -23,7 +35,6 @@ function RouteSwitch() {
                         newCart.push(obj)
                     }
                 })
-
                 return([...newCart])
             })
         } else {
@@ -36,13 +47,12 @@ function RouteSwitch() {
             })
         }
     }
-    let cartCount = 0;
     
 
     return(
         <BrowserRouter basename="/">
             <Routes>
-                <Route path="/" element={<App addToCart={addToCart} />} />
+                <Route path="/" element={<App addToCart={addToCart} cartCount={cartCount} />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/shop/:productId" element={<ProductPage />} />

@@ -16,7 +16,7 @@ function App(props) {
   let featuredProducts = products.slice(0,4);
   return (
     <div className="main-container">
-      <Nav cart={props.cart} />
+      <Nav cartCount={props.cartCount} />
       <div className="hero-container">
       <div className="hero-title-img">
           <div className="hero-title-container">
