@@ -14,7 +14,7 @@ function ProductCard (props) {
                 <h2 className="product-card-title">{props.name}</h2>
             </Link>
             <p className="product-card-price">{props.price + "$"}</p>
-            <button type="button" className="main-button product-card-buton">ADD TO CART</button>
+            <button onClick={() => props.addToCart(props.id)} type="button" className="main-button product-card-buton">ADD TO CART</button>
         </div>
     )
 }

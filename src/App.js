@@ -6,18 +6,17 @@ import Footer from "./components/Footer";
 import ProductData from "./components/ProductData";
 import ProductCard from "./components/ProductCard";
 
-function App() {
+function App(props) {
 
   let products = ProductData.map((product) => {
     return (
-        <ProductCard price={product.price} img={product.img} name={product.name} />
+        <ProductCard addToCart={props.addToCart} key={product.id} id={product.id} price={product.price} img={product.img} name={product.name} />
     )
   })
   let featuredProducts = products.slice(0,4);
-  console.log(featuredProducts)
   return (
     <div className="main-container">
-      <Nav />
+      <Nav cart={props.cart} />
       <div className="hero-container">
       <div className="hero-title-img">
           <div className="hero-title-container">
