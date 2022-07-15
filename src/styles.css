@@ -299,6 +299,10 @@ nav li a:hover{
     background-color: #F5F0F1;
     border-radius: 5px;
 }
+.product-card a {
+    text-decoration: none;
+    color:#565B7B;
+}
 .product-card-img-container {
     width: 250px;
     height: 300px;
@@ -325,6 +329,43 @@ nav li a:hover{
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
+}
+.product-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    height: 100%;
+    flex-grow: 1;
+}
+.product-page-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.product-page-image {
+    width: 250px;
+}
+.product-page-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.product-page-title {
+    color: #565B7B;
+    font-size: 1.8rem;
+}
+.product-page-price {
+    color: #2d292e;
+    font-size: 1.1rem;
+}
+.product-page-button-container {
+    margin-top: 10px;
+}
+.product-page-image-container {
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
 }
 
 @media only screen and (min-width: 700px) {
@@ -385,6 +426,26 @@ nav li a:hover{
     .hero-title-img {
         max-width: 750px;
     }
+    .product-page-card {
+        flex-direction: row;
+        display: flex;
+    }
+    .product-page-image {
+        width: 300px;
+    }
+    .product-page-title {
+        font-size: 2.4rem;
+    }
+    .product-page-text-container {
+        gap: 2rem;
+    }
+    .product-page-image-container {
+        width: 300px;
+        height: 350px;
+    }
+    .product-page-price {
+        font-size: 1.5rem;
+    }
 }
 @media only screen and (min-width: 1200px) {
     .contact-bouquet {
@@ -414,6 +475,13 @@ nav li a:hover{
     }
     .hero-button-container {
         margin-top: 150px;
+    }
+    .product-page-image {
+        width: 350px;
+    }
+    .product-page-image-container {
+        width: 350px;
+        height: 400px;
     }
 }
 @media only screen and (min-width: 1800px) {
@@ -464,5 +532,15 @@ nav li a:hover{
         grid-template-columns: repeat(auto-fill, 350px);
         max-width: 2000px;
         margin: 0 auto;
+    }
+    .featured-products-title {
+        font-size: 1.6rem;
+    }
+    .product-page-image {
+        width: 400px;
+    }
+    .product-page-image-container {
+        width: 400px;
+        height: 450px;
     }
 }

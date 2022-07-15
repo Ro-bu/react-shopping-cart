@@ -7,7 +7,7 @@ import ProductCard from "./components/ProductCard";
 function Shop() {
     let products = ProductData.map((product) => {
         return (
-            <ProductCard price={product.price} img={product.img} name={product.name} />
+            <ProductCard key={product.name} id={product.id} price={product.price} img={product.img} name={product.name} />
         )
     })
 
