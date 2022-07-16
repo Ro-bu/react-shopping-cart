@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-shopping-cart/static/css/main.7eb463a4.css",
+    "main.js": "/react-shopping-cart/static/js/main.52ca3a0b.js",
+    "static/media/bouquet6.jpg": "/react-shopping-cart/static/media/bouquet6.c6fbb5661968d7615e42.jpg",
+    "static/media/bouquet1.jpg": "/react-shopping-cart/static/media/bouquet1.b598ec9bd79b03bbb2c9.jpg",
+    "static/media/bouquet3.jpg": "/react-shopping-cart/static/media/bouquet3.2b3b905ee8637686c1dc.jpg",
+    "static/media/bouquet4.jpg": "/react-shopping-cart/static/media/bouquet4.c0783d0dbe3cfa4437f9.jpg",
+    "static/media/bouquet2.jpg": "/react-shopping-cart/static/media/bouquet2.073b8d54366ac0184a1b.jpg",
+    "static/media/bouquet7.jpg": "/react-shopping-cart/static/media/bouquet7.edb62df54a9961c98c41.jpg",
+    "static/media/bouquet8.jpg": "/react-shopping-cart/static/media/bouquet8.99de6e4a02d69a242ff4.jpg",
+    "static/media/hero.jpg": "/react-shopping-cart/static/media/hero.70e5befa214e024089be.jpg",
+    "static/media/bouquet5.jpg": "/react-shopping-cart/static/media/bouquet5.4ca14795661a3c44d3c8.jpg",
+    "static/media/contact-bouquet.jpg": "/react-shopping-cart/static/media/contact-bouquet.fcb38431d14a1d5fcbc0.jpg",
+    "index.html": "/react-shopping-cart/index.html",
+    "main.7eb463a4.css.map": "/react-shopping-cart/static/css/main.7eb463a4.css.map",
+    "main.52ca3a0b.js.map": "/react-shopping-cart/static/js/main.52ca3a0b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7eb463a4.css",
+    "static/js/main.52ca3a0b.js"
+  ]
+}
