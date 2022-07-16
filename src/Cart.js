@@ -20,6 +20,7 @@ function Cart(props) {
                 img={correctData.img}
                 name={correctData.name}
                 price={correctData.price}
+                id={item.id}
             />
         )
     })
@@ -28,6 +29,7 @@ function Cart(props) {
         <div className="main-container">
             <Nav cartCount={props.cartCount} />
             <div className="cart-container">
+                <h2 className="cart-title">YOUR CART</h2>
                 {cartLines}
             </div>
             <Footer />
