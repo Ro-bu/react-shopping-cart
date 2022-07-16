@@ -28,7 +28,7 @@ function Cart(props) {
             />
         )
     })
-
+    subtotal = Math.floor(subtotal*100)/100
     return (
         <div className="main-container">
             <Nav cartCount={props.cartCount} />

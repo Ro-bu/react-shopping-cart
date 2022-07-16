@@ -421,6 +421,7 @@ nav li a:hover{
     font-weight: 400;
     margin-top: 10px;
     gap: 5px;
+    user-select: none;
 }
 .cart-qty-triangle {
     display: flex;
