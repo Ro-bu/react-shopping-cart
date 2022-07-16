@@ -420,7 +420,6 @@ nav li a:hover{
     color: #2d292e;
     font-weight: 400;
     margin-top: 10px;
-
     gap: 5px;
 }
 .cart-qty-triangle {
@@ -535,6 +534,43 @@ nav li a:hover{
     }
     .product-page-price {
         font-size: 1.5rem;
+    }
+    .cart-product-line {
+        min-width: 400px;
+    }
+    .cart-product-line-img-container {
+        width: 200px;
+        height: 250px;
+        overflow: hidden;
+    }
+    .cart-product-line-img {
+        width: 200px;
+    }
+    .cart-qty-triangle {
+        width: 30px;
+        height: 30px;
+    }
+    .triangle-left {
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 12px solid #FFF8FB;
+    }
+    .triangle-right {
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 12px solid #FFF8FB;
+    }
+    .cart-product-line-qty {
+        font-size: 1.6rem;
+        margin-top: 20px;
+        gap: 10px;
+    }
+    .cart-product-line-title {
+        font-size: 1.8rem;
+    }
+    .cart-product-line-price {
+        font-size: 1.2rem;
+        margin-top: 20px;
     }
 }
 @media only screen and (min-width: 1200px) {
