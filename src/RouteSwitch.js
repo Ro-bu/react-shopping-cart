@@ -70,13 +70,13 @@ function RouteSwitch() {
     
 
     return(
-        <BrowserRouter basename="/">
+        <BrowserRouter basename="/react-shopping-cart">
             <Routes>
-                <Route path="/react-shopping-cart" element={<App addToCart={addToCart} cartCount={cartCount} />} />
-                <Route path="/react-shopping-cart/contact" element={<Contact cartCount={cartCount} />} />
-                <Route path="/react-shopping-cart/shop" element={<Shop cartCount={cartCount} addToCart={addToCart} />} />
-                <Route path="/react-shopping-cart/shop/:productId" element={<ProductPage cartCount={cartCount} addToCart={addToCart} />} />
-                <Route path="/react-shopping-cart/cart" element={<Cart addToCart={addToCart} removeFromCart={removeFromCart} shoppingCart={shoppingCart} cartCount={cartCount} />} />
+                <Route path="/" element={<App addToCart={addToCart} cartCount={cartCount} />} />
+                <Route path="/contact" element={<Contact cartCount={cartCount} />} />
+                <Route path="/shop" element={<Shop cartCount={cartCount} addToCart={addToCart} />} />
+                <Route path="/shop/:productId" element={<ProductPage cartCount={cartCount} addToCart={addToCart} />} />
+                <Route path="/cart" element={<Cart addToCart={addToCart} removeFromCart={removeFromCart} shoppingCart={shoppingCart} cartCount={cartCount} />} />
             </Routes>
         </BrowserRouter>
     )
