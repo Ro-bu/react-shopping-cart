@@ -4,6 +4,7 @@ import App from "./App";
 import Contact from "./Contact";
 import Shop from "./Shop";
 import ProductPage from "./ProductPage";
+import Cart from "./Cart";
 
 function RouteSwitch() {
     const [shoppingCart, setShoppingCart] = React.useState([]);
@@ -56,6 +57,7 @@ function RouteSwitch() {
                 <Route path="/contact" element={<Contact cartCount={cartCount} />} />
                 <Route path="/shop" element={<Shop cartCount={cartCount} addToCart={addToCart} />} />
                 <Route path="/shop/:productId" element={<ProductPage cartCount={cartCount} addToCart={addToCart} />} />
+                <Route path="/cart" element={<Cart shoppingCart={shoppingCart} cartCount={cartCount} />} />
             </Routes>
         </BrowserRouter>
     )
