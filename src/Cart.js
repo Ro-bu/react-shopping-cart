@@ -6,6 +6,8 @@ import ProductData from "./components/ProductData";
 
 function Cart(props) {
 
+    let subtotal = 0;
+
     let cartLines = props.shoppingCart.map((item) => {
         let correctData
         ProductData.forEach((product)=> {
@@ -13,7 +15,7 @@ function Cart(props) {
                 correctData = {...product}
             }
         })
-        console.log(correctData);
+        subtotal = subtotal + item.qty * correctData.price;
         return(
             <CartProductLine
                 qty={item.qty}
@@ -31,6 +33,10 @@ function Cart(props) {
             <div className="cart-container">
                 <h2 className="cart-title">YOUR CART</h2>
                 {cartLines}
+                <div className="cart-subtotal-and-buttons">
+                    <p className="cart-subtotal">{"Total: $" + subtotal}</p>
+                    <button type="button" className="main-button">CHECKOUT</button>
+                </div>
             </div>
             <Footer />
         </div>

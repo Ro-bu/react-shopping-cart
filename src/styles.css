@@ -447,7 +447,17 @@ nav li a:hover{
     border-bottom: 5px solid transparent;
     border-left: 8px solid #FFF8FB;
 }
-
+.cart-subtotal-and-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+.cart-subtotal {
+    font-size: 1.3rem;
+    color: #2d292e;
+}
 @media only screen and (min-width: 700px) {
     .contact-information {
         width: 400px;
