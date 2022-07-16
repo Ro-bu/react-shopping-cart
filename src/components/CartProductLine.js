@@ -16,11 +16,11 @@ function CartProductLine(props) {
                     <p className="cart-product-line-price">{props.price + "$"}</p>
                 </div>
                 <div className="cart-product-line-qty">
-                    <div className="cart-qty-triangle">
+                    <div onClick={() => props.removeFromCart(props.id)} className="cart-qty-triangle">
                         <div className="triangle-left"></div>
                     </div>
                     <div className="cart-product-line-qty-number">{props.qty}</div>
-                    <div className="cart-qty-triangle">
+                    <div onClick={() => props.addToCart(props.id)} className="cart-qty-triangle">
                         <div className="triangle-right"></div>
                     </div>
                 </div>

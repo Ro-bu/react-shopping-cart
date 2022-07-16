@@ -10,7 +10,14 @@ function App(props) {
 
   let products = ProductData.map((product) => {
     return (
-        <ProductCard addToCart={props.addToCart} key={product.id} id={product.id} price={product.price} img={product.img} name={product.name} />
+        <ProductCard
+          addToCart={props.addToCart}
+          key={product.id}
+          id={product.id}
+          price={product.price}
+          img={product.img}
+          name={product.name}
+        />
     )
   })
   let featuredProducts = products.slice(0,4);

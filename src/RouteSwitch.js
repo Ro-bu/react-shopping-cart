@@ -22,7 +22,6 @@ function RouteSwitch() {
     }, [shoppingCart])
 
     function addToCart(productId) {
-        console.log(shoppingCart)
         let isInCart = shoppingCart.some((product) => {
             return product.id === productId;
         })
@@ -48,6 +47,26 @@ function RouteSwitch() {
             })
         }
     }
+    function removeFromCart(productId) {
+        let isInCart = shoppingCart.some((product) => {
+            return product.id === productId;
+        })
+        if(isInCart) {
+            setShoppingCart((prev) => {
+                let newCart = [];
+                prev.forEach((obj) => {
+                    if(obj.id === productId) {
+                        if(obj.qty-1 > 0){
+                            newCart.push({qty: obj.qty-1, id: obj.id});
+                        }
+                    } else {
+                        newCart.push(obj);
+                    }
+                })
+                return ([...newCart])
+            })
+        }
+    }
     
 
     return(
@@ -57,7 +76,7 @@ function RouteSwitch() {
                 <Route path="/contact" element={<Contact cartCount={cartCount} />} />
                 <Route path="/shop" element={<Shop cartCount={cartCount} addToCart={addToCart} />} />
                 <Route path="/shop/:productId" element={<ProductPage cartCount={cartCount} addToCart={addToCart} />} />
-                <Route path="/cart" element={<Cart shoppingCart={shoppingCart} cartCount={cartCount} />} />
+                <Route path="/cart" element={<Cart addToCart={addToCart} removeFromCart={removeFromCart} shoppingCart={shoppingCart} cartCount={cartCount} />} />
             </Routes>
         </BrowserRouter>
     )

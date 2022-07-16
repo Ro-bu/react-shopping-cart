@@ -23,6 +23,8 @@ function Cart(props) {
                 name={correctData.name}
                 price={correctData.price}
                 id={item.id}
+                addToCart={props.addToCart}
+                removeFromCart={props.removeFromCart}
             />
         )
     })
