@@ -5,68 +5,19 @@ import Contact from "./Contact";
 import Shop from "./Shop";
 import ProductPage from "./ProductPage";
 import Cart from "./Cart";
+import {useSelector, useDispatch} from "react-redux";
+import {calculateTotals} from "./redux/slices/cart";
 
 function RouteSwitch() {
-    const [shoppingCart, setShoppingCart] = React.useState([]);
-    const [cartCount, setCartCount] = React.useState(0)
+    const dispatch = useDispatch();
+    const cartItems = useSelector((state) => state.cart)
 
-    function updateCartCount() {
-        let newCount = 0;
-        shoppingCart.forEach((obj) => {
-            newCount += obj.qty
-        })
-        setCartCount(newCount);
-    }
     React.useEffect(() => {
-        updateCartCount();
-    }, [shoppingCart])
+        dispatch(calculateTotals());
+    }, [cartItems])
 
-    function addToCart(productId) {
-        let isInCart = shoppingCart.some((product) => {
-            return product.id === productId;
-        })
-        if(isInCart) {
-            setShoppingCart((prev) => {
-                let newCart = []
-                prev.forEach((obj) => {
-                    if(obj.id === productId) {
-                        newCart.push({qty: obj.qty+1, id: obj.id})
-                    } else {
-                        newCart.push(obj)
-                    }
-                })
-                return([...newCart])
-            })
-        } else {
-            setShoppingCart((prev) => {
-                return (
-                    [{qty: 1, id: productId},
-                        ...prev
-                    ]
-                )
-            })
-        }
-    }
-    function removeFromCart(productId) {
-        let isInCart = shoppingCart.some((product) => {
-            return product.id === productId;
-        })
-        if(isInCart) {
-            setShoppingCart((prev) => {
-                let newCart = [];
-                prev.forEach((obj) => {
-                    if(obj.id === productId) {
-                        if(obj.qty-1 > 0){
-                            newCart.push({qty: obj.qty-1, id: obj.id});
-                        }
-                    } else {
-                        newCart.push(obj);
-                    }
-                })
-                return ([...newCart])
-            })
-        }
-    }
+
+    // vaja eemaldada allolevad functionid ja lisada nad componentitesse
     
 
     return(

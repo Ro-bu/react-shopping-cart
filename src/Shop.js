@@ -9,7 +9,7 @@ function Shop(props) {
         return (
             <ProductCard addToCart={props.addToCart} key={product.name} id={product.id} price={product.price} img={product.img} name={product.name} />
         )
-    })
+    });
 
     return(
         <div className="main-container">
@@ -20,6 +20,6 @@ function Shop(props) {
             <Footer />
         </div>
     )
-}
+};
 
 export default Shop;
