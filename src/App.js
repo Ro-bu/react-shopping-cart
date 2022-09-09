@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import ProductData from "./components/ProductData";
 import ProductCard from "./components/ProductCard";
 
-function App(props) {
+function App() {
 
   let products = ProductData.map((product) => {
     return (
@@ -14,6 +14,7 @@ function App(props) {
           price={product.price}
           img={product.img}
           name={product.name}
+          product={product}
         />
     )
   })

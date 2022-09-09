@@ -52,6 +52,9 @@ body {
 html {
     font-size: 16px;
 }
+#root {
+    position: relative;
+}
 .main-container {
     padding-bottom: 50px;
     box-sizing: border-box;

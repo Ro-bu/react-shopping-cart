@@ -1,41 +1,38 @@
 import React from "react";
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
+import { useSelector } from "react-redux";
 import CartProductLine from "./components/CartProductLine";
 import ProductData from "./components/ProductData";
 
-function Cart(props) {
 
-    let subtotal = 0;
+function Cart() {
 
-    let cartLines = props.shoppingCart.map((item) => {
+    const {total, cartItems} = useSelector((state) => state.cart)
+
+    let cartLines = cartItems.map((item) => {
         let correctData
         ProductData.forEach((product)=> {
             if(product.id === item.id) {
                 correctData = {...product}
             }
         })
-        subtotal = subtotal + item.qty * correctData.price;
         return(
             <CartProductLine
+                key={item.id}
                 qty={item.qty}
                 img={correctData.img}
                 name={correctData.name}
                 price={correctData.price}
                 id={item.id}
-                addToCart={props.addToCart}
-                removeFromCart={props.removeFromCart}
             />
         )
     })
-    subtotal = Math.floor(subtotal*100)/100
     return (
         <div className="main-container">
             <div className="cart-container">
                 <h2 className="cart-title">YOUR CART</h2>
                 {cartLines}
                 <div className="cart-subtotal-and-buttons">
-                    <p className="cart-subtotal">{"Total: $" + subtotal}</p>
+                    <p className="cart-subtotal">Total: $ {Math.floor(total*100)/100}</p>
                     <button type="button" className="main-button">CHECKOUT</button>
                 </div>
             </div>

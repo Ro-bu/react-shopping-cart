@@ -1,7 +1,7 @@
 import React from "react";
 import contactBouquet from "./img/contact-bouquet.jpg";
 
-function Contact(props) {
+function Contact() {
 
     return (
         <div className="main-container">
