@@ -1,6 +1,4 @@
 import React from "react";
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
 import {useParams} from "react-router-dom";
 import ProductData from "./components/ProductData";
 
@@ -9,7 +7,6 @@ function ProductPage(props) {
     const productDetails = ProductData.find((product) => product.id === productId);
     return (
         <div className="main-container">
-            <Nav cartCount={props.cartCount} />
             <div className="product-page">
                 <div className="product-page-card">
                     <div className="product-page-image-container">
@@ -24,7 +21,6 @@ function ProductPage(props) {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

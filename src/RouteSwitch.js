@@ -5,6 +5,8 @@ import Contact from "./Contact";
 import Shop from "./Shop";
 import ProductPage from "./ProductPage";
 import Cart from "./Cart";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import {useSelector, useDispatch} from "react-redux";
 import {calculateTotals} from "./redux/slices/cart";
 
@@ -23,11 +25,13 @@ function RouteSwitch() {
     return(
         <BrowserRouter basename="/react-shopping-cart">
             <Routes>
-                <Route path="/" element={<App addToCart={addToCart} cartCount={cartCount} />} />
-                <Route path="/contact" element={<Contact cartCount={cartCount} />} />
-                <Route path="/shop" element={<Shop cartCount={cartCount} addToCart={addToCart} />} />
-                <Route path="/shop/:productId" element={<ProductPage cartCount={cartCount} addToCart={addToCart} />} />
-                <Route path="/cart" element={<Cart addToCart={addToCart} removeFromCart={removeFromCart} shoppingCart={shoppingCart} cartCount={cartCount} />} />
+                <Nav />
+                <Route path="/" element={<App addToCart={addToCart} />} />
+                <Route path="/contact" element={<Contact  />} />
+                <Route path="/shop" element={<Shop addToCart={addToCart} />} />
+                <Route path="/shop/:productId" element={<ProductPage  addToCart={addToCart} />} />
+                <Route path="/cart" element={<Cart addToCart={addToCart} removeFromCart={removeFromCart} shoppingCart={shoppingCart}  />} />
+                <Footer />
             </Routes>
         </BrowserRouter>
     )

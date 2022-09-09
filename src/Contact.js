@@ -1,13 +1,10 @@
 import React from "react";
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
 import contactBouquet from "./img/contact-bouquet.jpg";
 
 function Contact(props) {
 
     return (
         <div className="main-container">
-            <Nav cartCount={props.cartCount} />
             <div className="contact-container">
                 <div className="about-us">
                     <img className="contact-bouquet" src={contactBouquet} alt="bouquet" />
@@ -35,7 +32,6 @@ function Contact(props) {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

@@ -13,11 +13,9 @@ function Shop(props) {
 
     return(
         <div className="main-container">
-            <Nav cartCount={props.cartCount} />
                 <div className="shop-container">
                     {products}
                 </div>
-            <Footer />
         </div>
     )
 };
