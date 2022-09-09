@@ -62,7 +62,6 @@ html {
 
 
 nav {
-    min-width: 100vw;
     height: 100px;
     background-color: #FFF8FB;
     display: flex;
@@ -128,7 +127,6 @@ nav li a:hover{
     display: flex;
     flex-direction: column;
     position: relative;
-    min-width: 100vw;
     min-height: 100vh;
 }
 .hero-container {
@@ -189,8 +187,8 @@ nav li a:hover{
 .footer {
     position: absolute;
     bottom: 0;
-    left: 0;
-    min-width: 100vw;
+    left: 50%;
+    transform: translate(-50%, 0);
     height: 50px;
     display: flex;
     align-items: center;
